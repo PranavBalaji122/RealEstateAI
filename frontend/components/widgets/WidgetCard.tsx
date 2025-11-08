@@ -40,13 +40,13 @@ export const WidgetCard: React.FC<WidgetCardProps> = ({
         <div className={`flex items-center gap-1 transition-all duration-300 ease-in-out ${
           isEditMode ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'
         }`}>
-          <button className="p-1.5 rounded-lg bg-[#E8EAF6] text-[#8B94A8] hover:text-[#3E4C5E] transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]">
+          <button className="p-1.5 rounded-3xl bg-[#E8EAF6] text-[#8B94A8] hover:text-[#3E4C5E] transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]">
             <Maximize2 size={14} />
           </button>
           {onRemove && (
             <button 
               onClick={onRemove}
-              className="p-1.5 rounded-lg bg-[#E8EAF6] text-[#FF6B7A] hover:text-[#FF4555] transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
+              className="p-1.5 rounded-3xl bg-[#E8EAF6] text-[#FF6B7A] hover:text-[#FF4555] transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
             >
               <X size={14} />
             </button>

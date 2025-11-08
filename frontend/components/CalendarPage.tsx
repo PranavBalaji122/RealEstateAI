@@ -139,13 +139,13 @@ export const CalendarPage: React.FC<CalendarPageProps> = ({ sidebarCollapsed = t
               <div className="flex gap-2">
                 <button
                   onClick={previousMonth}
-                  className="p-2 bg-[#E8EAF6] rounded-lg transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
+                  className="p-2 bg-[#E8EAF6] rounded-3xl transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
                 >
                   <ChevronLeft size={18} className="text-[#8B94A8]" />
                 </button>
                 <button
                   onClick={nextMonth}
-                  className="p-2 bg-[#E8EAF6] rounded-lg transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
+                  className="p-2 bg-[#E8EAF6] rounded-3xl transition-all shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] active:shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]"
                 >
                   <ChevronRight size={18} className="text-[#8B94A8]" />
                 </button>
@@ -155,7 +155,7 @@ export const CalendarPage: React.FC<CalendarPageProps> = ({ sidebarCollapsed = t
             <div className="flex gap-2">
               <button
                 onClick={() => setViewMode('month')}
-                className={`px-4 py-2 rounded-lg text-sm transition-all ${
+                className={`px-4 py-2 rounded-3xl text-sm transition-all ${
                   viewMode === 'month'
                     ? 'bg-gradient-to-br from-[#FF8B65] to-[#FFA07A] text-white shadow-[0_4px_14px_rgba(255,139,101,0.4)]'
                     : 'bg-[#E8EAF6] text-[#8B94A8] shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF]'
@@ -165,7 +165,7 @@ export const CalendarPage: React.FC<CalendarPageProps> = ({ sidebarCollapsed = t
               </button>
               <button
                 onClick={() => setViewMode('week')}
-                className={`px-4 py-2 rounded-lg text-sm transition-all ${
+                className={`px-4 py-2 rounded-3xl text-sm transition-all ${
                   viewMode === 'week'
                     ? 'bg-gradient-to-br from-[#FF8B65] to-[#FFA07A] text-white shadow-[0_4px_14px_rgba(255,139,101,0.4)]'
                     : 'bg-[#E8EAF6] text-[#8B94A8] shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF]'
@@ -201,7 +201,7 @@ export const CalendarPage: React.FC<CalendarPageProps> = ({ sidebarCollapsed = t
               return (
                 <div
                   key={day}
-                  className={`aspect-square bg-[#E8EAF6] rounded-lg p-2 transition-all cursor-pointer border shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] ${
+                  className={`aspect-square bg-[#E8EAF6] rounded-3xl p-2 transition-all cursor-pointer border shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF] ${
                     isToday ? 'border-[#FF8B65]' : 'border-transparent'
                   }`}
                 >
@@ -239,7 +239,7 @@ export const CalendarPage: React.FC<CalendarPageProps> = ({ sidebarCollapsed = t
                 className="bg-[#E8EAF6] rounded-xl p-4 transition-all cursor-pointer shadow-[3px_3px_6px_#C8CADE,-3px_-3px_6px_#FFFFFF] hover:shadow-[2px_2px_4px_#C8CADE,-2px_-2px_4px_#FFFFFF]"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#E8EAF6] rounded-lg flex flex-col items-center justify-center shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#E8EAF6] rounded-3xl flex flex-col items-center justify-center shadow-[inset_2px_2px_4px_#C8CADE,inset_-2px_-2px_4px_#FFFFFF]">
                     <span className="text-xs text-[#8B94A8]">
                       {event.date.toLocaleDateString('en-US', { month: 'short' })}
                     </span>

@@ -122,7 +122,7 @@ export default function Dashboard() {
         {/* AI Insights */}
         <div className="bg-[#F8F7F5] rounded-xl p-6 border border-[#E5E0DA]">
           <div className="flex items-center gap-2 mb-4">
-            <div className="p-1.5 bg-[#FFD9B3] rounded-lg">
+            <div className="p-1.5 bg-[#FFD9B3] rounded-3xl">
               <span className="text-sm">🧠</span>
             </div>
             <h3>AI Insights</h3>

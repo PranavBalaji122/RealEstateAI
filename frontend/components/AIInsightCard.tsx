@@ -29,7 +29,7 @@ export default function AIInsightCard({ title, description, type = 'insight' }: 
 
   return (
     <div className="bg-[#F8F7F5] rounded-xl p-4 border border-[#E5E0DA] flex gap-3">
-      <div className={`p-2 ${config.bgColor} rounded-lg h-fit`}>
+      <div className={`p-2 ${config.bgColor} rounded-3xl h-fit`}>
         <Icon size={18} className={config.iconColor} />
       </div>
       <div className="flex-1">

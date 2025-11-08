@@ -68,7 +68,7 @@ export default function Coaching() {
             {aiMessages.map((msg) => (
               <div key={msg.id} className="p-4 bg-[#EFEAE5] rounded-xl">
                 <div className="flex items-start gap-3 mb-2">
-                  <div className="p-2 bg-[#FFD9B3] rounded-lg">
+                  <div className="p-2 bg-[#FFD9B3] rounded-3xl">
                     <Sparkles size={16} className="text-[#F7A654]" />
                   </div>
                   <div className="flex-1">
