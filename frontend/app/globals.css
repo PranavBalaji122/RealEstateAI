@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neumorphic Color Palette - Soft Pastels */
+    --primary-accent: #FF8B65;
+    --primary-hover: #FFA07A;
+    --secondary-accent: #C4A1FF;
+    --tertiary-accent: #FF9ECE;
+    
+    /* Neumorphic Background - Soft Light Gray/Lavender */
+    --background: #E8EAF6;
+    --surface: #E8EAF6;
+    --surface-light: #F3F4FB;
+    --surface-card: #E8EAF6;
+    
+    /* Text Colors */
+    --text-primary: #3E4C5E;
+    --text-secondary: #8B94A8;
+    --text-muted: #B4BBCC;
+    
+    /* Border Colors */
+    --border: #D1D5E0;
+    --border-light: #E5E8F0;
+    
+    /* Status Colors */
+    --success: #6DD47E;
+    --warning: #FFB84D;
+    --error: #FF6B7A;
+    
+    /* Neumorphic Shadow Values */
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #C8CADE;
+    --shadow-inset-light: #FFFFFF;
+    --shadow-inset-dark: #C8CADE;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#E8EAF6] text-[#3E4C5E];
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  small {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+@layer utilities {
+  /* Neumorphic Shadow Utilities */
+  .neu-flat {
+    background: #E8EAF6;
+    box-shadow: 
+      8px 8px 16px #C8CADE,
+      -8px -8px 16px #FFFFFF;
+  }
+
+  .neu-flat-sm {
+    background: #E8EAF6;
+    box-shadow: 
+      4px 4px 8px #C8CADE,
+      -4px -4px 8px #FFFFFF;
+  }
+
+  .neu-pressed {
+    background: #E8EAF6;
+    box-shadow: 
+      inset 4px 4px 8px #C8CADE,
+      inset -4px -4px 8px #FFFFFF;
+  }
+
+  .neu-convex {
+    background: linear-gradient(145deg, #F3F4FB, #DDE0F0);
+    box-shadow: 
+      8px 8px 16px #C8CADE,
+      -8px -8px 16px #FFFFFF;
+  }
+
+  .neu-concave {
+    background: linear-gradient(145deg, #DDE0F0, #F3F4FB);
+    box-shadow: 
+      inset 4px 4px 8px #C8CADE,
+      inset -4px -4px 8px #FFFFFF;
+  }
+
+  .neu-card {
+    background: #E8EAF6;
+    box-shadow: 
+      12px 12px 24px #C8CADE,
+      -12px -12px 24px #FFFFFF;
+  }
+
+  .neu-button {
+    background: #E8EAF6;
+    box-shadow: 
+      6px 6px 12px #C8CADE,
+      -6px -6px 12px #FFFFFF;
+    transition: all 0.2s ease;
+  }
+
+  .neu-button:hover {
+    box-shadow: 
+      8px 8px 16px #C8CADE,
+      -8px -8px 16px #FFFFFF;
+  }
+
+  .neu-button:active {
+    box-shadow: 
+      inset 3px 3px 6px #C8CADE,
+      inset -3px -3px 6px #FFFFFF;
+  }
+
+  .neu-input {
+    background: #E8EAF6;
+    box-shadow: 
+      inset 3px 3px 6px #C8CADE,
+      inset -3px -3px 6px #FFFFFF;
+  }
+
+  @keyframes slide-in-diagonal {
+    from {
+      opacity: 0;
+      transform: translate(-100%, -100%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes slide-out-diagonal {
+    from {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-100%, -100%);
+    }
+  }
+
+  .animate-slide-in-diagonal {
+    animation: slide-in-diagonal 0.3s ease-out;
+  }
+
+  .animate-slide-out-diagonal {
+    animation: slide-out-diagonal 0.3s ease-in forwards;
+  }
+
+  /* Custom Scrollbar Styles - Neumorphic */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #C4A1FF #E8EAF6;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #E8EAF6;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, #C4A1FF, #B891EE);
+    border-radius: 10px;
+    box-shadow: 
+      2px 2px 4px #C8CADE,
+      -2px -2px 4px #FFFFFF;
+    transition: background 0.2s ease;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(145deg, #D4B1FF, #C4A1FF);
+  }
+
+  /* React Grid Layout Customizations */
+  .react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top, width, height;
+  }
+
+  .react-grid-item.cssTransforms {
+    transition-property: transform, width, height;
+  }
+
+  .react-grid-item.resizing {
+    transition: none;
+    z-index: 100;
+  }
+
+  .react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 100;
+    opacity: 0.8;
+  }
+
+  .react-grid-item.dropping {
+    visibility: hidden;
+  }
+
+  .react-grid-item.react-grid-placeholder {
+    background: rgba(255, 139, 101, 0.15);
+    opacity: 0.8;
+    transition-duration: 100ms;
+    z-index: 2;
+    border-radius: 24px;
+    border: 2px dashed #FF8B65;
+  }
+
+  .react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+
+  .react-resizable-handle-se {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+  }
+
+  .react-resizable-handle::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #B4BBCC;
+    border-bottom: 2px solid #B4BBCC;
+  }
+}
